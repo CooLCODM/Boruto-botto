@@ -2,7 +2,6 @@ import discord
 import os
 import asyncio
 import random
-from keep_alive import keep_alive
 from discord.ext import commands
 
 client = commands.Bot(command_prefix=(["n ","N ","nb ","Nb "]), help_command=None)
@@ -95,5 +94,4 @@ async def ninjapromo(ctx):
     embed.set_thumbnail(url="")
     await ctx.send(embed=embed)
 
-keep_alive()
 client.run(os.getenv('token'))
